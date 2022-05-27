@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://hoangphuc1998.github.io/categories/</loc>
   </url><url>
-    <loc>http://example.org/tags/first/</loc>
+    <loc>https://hoangphuc1998.github.io/tags/first/</loc>
   </url><url>
-    <loc>http://example.org/intro/</loc>
+    <loc>https://hoangphuc1998.github.io/intro/</loc>
   </url><url>
-    <loc>http://example.org/intro/intro/</loc>
+    <loc>https://hoangphuc1998.github.io/intro/intro/</loc>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://hoangphuc1998.github.io/tags/</loc>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>https://hoangphuc1998.github.io/</loc>
   </url>
 </urlset>
