@@ -1,5 +1,5 @@
 ---
-title: "My 1st post"
+title: "Variational Lower Bound - Demystifying"
 # weight: 1
 # aliases: ["/first"]
 tags: ["first"]
@@ -11,7 +11,6 @@ draft: false
 hidemeta: false
 comments: false
 description: "Desc Text."
-canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
