@@ -1,9 +1,9 @@
 ---
-title: "My 1st post"
+title: "Variational Inference"
 # weight: 1
 # aliases: ["/first"]
-tags: ["first"]
-author: "Me"
+tags: ["statistics", "generative-models"]
+date: "2022-06-26"
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
@@ -11,7 +11,6 @@ draft: false
 hidemeta: false
 comments: false
 description: "Desc Text."
-canonicalURL: "https://canonical.url/to/page"
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
@@ -28,3 +27,5 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
+
+# Inference as Optimization problem
