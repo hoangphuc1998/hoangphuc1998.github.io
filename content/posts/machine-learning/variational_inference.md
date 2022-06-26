@@ -22,6 +22,8 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
+categories: ["machine-learning"]
+# url: /machine-learning/variational_inference
 editPost:
     URL: "https://github.com/hoangphuc1998/hoangphuc1998.github.io/content"
     Text: "Suggest Changes" # edit text

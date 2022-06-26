@@ -28,16 +28,22 @@ languages:
           series: series
         menu:
             main:
+                - name: Machine Learning
+                  url: /posts/machine-learning
+                  weight: 1
+                - name: Finance
+                  url: /posts/finance
+                  weight: 5
+                - name: Archive
+                  url: /archive/
+                  weight: 10
                 - name: Search
-                  url: search/
+                  url: /search/
                   weight: 10
                 - name: Tags
-                  url: tags/
+                  url: /tags/
                   weight: 10
-                - name: Categories
-                  url: categories/
-                  weight: 10
-
+                
 outputs:
     home:
         - HTML
