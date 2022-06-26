@@ -1,9 +1,9 @@
 ---
-title: "Variational Lower Bound - Demystifying"
+title: "Variational Inference"
 # weight: 1
 # aliases: ["/first"]
-tags: ["first"]
-author: "Me"
+tags: ["statistics", "generative-models"]
+date: "2022-06-26"
 # author: ["Me", "You"] # multiple authors
 showToc: true
 TocOpen: false
@@ -27,3 +27,5 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
+
+# Inference as Optimization problem
