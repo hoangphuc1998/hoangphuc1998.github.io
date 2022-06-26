@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Wanderer&#39;s Blog</title>
-    <link>https://hoangphuc1998.github.io/</link>
-    <description>Recent content on Wanderer&#39;s Blog</description>
+    <title>Posts on Wanderer&#39;s Blog</title>
+    <link>https://hoangphuc1998.github.io/posts/</link>
+    <description>Recent content in Posts on Wanderer&#39;s Blog</description>
     <image>
       <url>https://hoangphuc1998.github.io/papermod-cover.png</url>
       <link>https://hoangphuc1998.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hoangphuc1998.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://hoangphuc1998.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Variational Inference</title>
       <link>https://hoangphuc1998.github.io/posts/variational_inference/</link>
@@ -19,7 +19,6 @@
       <guid>https://hoangphuc1998.github.io/posts/variational_inference/</guid>
       <description>Desc Text.</description>
     </item>
-    
     
   </channel>
 </rss>
