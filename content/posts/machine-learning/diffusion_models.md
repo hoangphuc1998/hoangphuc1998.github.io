@@ -1,5 +1,5 @@
 ---
-title: "Variational Inference"
+title: "Diffusion Models"
 # weight: 1
 # aliases: ["/first"]
 tags: ["statistics", "generative-models"]
@@ -29,5 +29,3 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
-
-# Inference as Optimization problem

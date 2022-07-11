@@ -30,4 +30,18 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 
+# 1. What is statistical inference?
+- Two questions:
+    - Marginal inference
+    - Maximum a posteriori
+- Example:
+- Inference in machine learning world is a special case of inference in graphical probabilistic models.
+# Why inference is hard?
+- Multidimensionality
+- Example
+- Sampling techniques
+- Advantages and disadvantages of sampling techniques
 # Inference as Optimization problem
+
+# Reference
+- CS228: Probabilistic Graphical Models of Stanford University ![https://ermongroup.github.io/cs228-notes](https://ermongroup.github.io/cs228-notes)
