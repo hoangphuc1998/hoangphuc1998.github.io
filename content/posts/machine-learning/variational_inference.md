@@ -6,7 +6,7 @@ tags: ["statistics", "generative-models"]
 date: "2022-06-26"
 # author: ["Me", "You"] # multiple authors
 showToc: true
-TocOpen: false
+TocOpen: true
 draft: false
 hidemeta: false
 comments: false
@@ -30,18 +30,21 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 
-# 1. What is statistical inference?
+# 1. What is Bayesian inference?
+(In this post, I will only talk about inference in Bayesian network, but the idea remain the same when applying to general Probabilistic Graphical Models)
+
+First of all, we need to know what is an Bayesian network.
 - Two questions:
     - Marginal inference
     - Maximum a posteriori
 - Example:
 - Inference in machine learning world is a special case of inference in graphical probabilistic models.
-# Why inference is hard?
+# 2. Why inference is hard?
 - Multidimensionality
 - Example
 - Sampling techniques
 - Advantages and disadvantages of sampling techniques
-# Inference as Optimization problem
+# 3. Inference as Optimization problem
 
 # Reference
 - CS228: Probabilistic Graphical Models of Stanford University ![https://ermongroup.github.io/cs228-notes](https://ermongroup.github.io/cs228-notes)
