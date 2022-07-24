@@ -33,12 +33,11 @@ editPost:
 # 1. What is Bayesian inference?
 (In this post, I will only talk about inference in Bayesian network, but the idea remain the same when applying to general Probabilistic Graphical Models)
 
-First of all, we need to know what is an Bayesian network.
+First of all, it is good to know what is a Bayesian network. A Bayesian network is a **directed acyclic graph** (DAG) that represents the joint probability of a set of random variables. The vertices of the graph 
 - Two questions:
     - Marginal inference
     - Maximum a posteriori
 - Example:
-- Inference in machine learning world is a special case of inference in graphical probabilistic models.
 # 2. Why inference is hard?
 - Multidimensionality
 - Example
