@@ -13,7 +13,8 @@ enableEmoji: true
 pygmentsUseClasses: true
 # googleAnalytics: UA-123-45
 googleAnalytics: G-YXP6VTGMYY
-
+customCSS: ["/css/style.css"]
+math: true
 minify:
     disableXML: true
     # minifyOutput: true
@@ -55,7 +56,7 @@ params:
     description: "Wanderer's Blog - Trang Trung Hoang Phuc"
     # author: Trang Trung Hoang Phuc
     # author: ["Me", "You"] # multiple authors
-
+    math: true
     defaultTheme: auto
     # disableThemeToggle: true
     ShowShareButtons: true
@@ -69,7 +70,6 @@ params:
     ShowToc: true
     # comments: false
     images: ["papermod-cover.png"]
-
     profileMode:
         enabled: false
         title: PaperMod

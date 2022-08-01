@@ -22,6 +22,7 @@ ShowPostNavLinks: true
 ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
+# math: true
 categories: ["machine-learning"]
 # url: /machine-learning/variational_inference
 editPost:
@@ -30,20 +31,31 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 
-# 1. What is Bayesian inference?
-(In this post, I will only talk about inference in Bayesian network, but the idea remain the same when applying to general Probabilistic Graphical Models)
+## What is Bayesian inference?
+### Bayesian networks
+(In this post, I will only talk about inference in Bayesian network, but the idea remains the same when applying to general Probabilistic Graphical Models)
 
-First of all, it is good to know what is a Bayesian network. A Bayesian network is a **directed acyclic graph** (DAG) that represents the joint probability of a set of random variables. The vertices of the graph 
+First of all, it is good to know what is a Bayesian network. A Bayesian network is a **directed acyclic graph** (DAG) that represents the joint probability of a set of random variables. The vertices of the graph represent random variables while the edges express the dependencies between them. To understand what this means, take a look at this easy Bayesian network with 3 random variables $a, b$ and $c$: 
+![Simple DAG of joint probability](/imgs/machine-learning/variational_inference/dag_example.png#center)
+Normally, the joint distribution of these 3 variables can be written as:
+$$P(a,b,c)=P(c|a,b)P(a,b)=P(c|a,b)P(b|a)P(a)$$
+
+But as you can see in the figure above, we can say that variables $a$ and $b$ are independent because there is no "direct" edge from $b$ to $a$ and vice versa. We can simplified the joint distribution $P(a,b,c)$ as:
+$$P(a,b,c)=P(c|a,b)P(b)P(a)$$
+
+In a more general case, let's consider the joint distribution of $N$ variables $x_1,x_2,...,x_N$:
+$$P(x_1,x_2,...,x_N)=P(x_1)P(x_2|x_1)...P(x_N|x_{N-1}...x_1)$$
+### Observed and latent variables
 - Two questions:
     - Marginal inference
     - Maximum a posteriori
 - Example:
-# 2. Why inference is hard?
+### Why inference is hard?
 - Multidimensionality
 - Example
 - Sampling techniques
 - Advantages and disadvantages of sampling techniques
-# 3. Inference as Optimization problem
+## Inference as Optimization problem
 
-# Reference
+## Reference
 - CS228: Probabilistic Graphical Models of Stanford University ![https://ermongroup.github.io/cs228-notes](https://ermongroup.github.io/cs228-notes)
