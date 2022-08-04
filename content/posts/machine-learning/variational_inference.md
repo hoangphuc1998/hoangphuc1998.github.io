@@ -43,8 +43,12 @@ $$P(a,b,c)=P(c|a,b)P(a,b)=P(c|a,b)P(b|a)P(a)$$
 But as you can see in the figure above, we can say that variables $a$ and $b$ are independent because there is no "direct" edge from $b$ to $a$ and vice versa. We can simplified the joint distribution $P(a,b,c)$ as:
 $$P(a,b,c)=P(c|a,b)P(b)P(a)$$
 
-In a more general case, let's consider the joint distribution of $N$ variables $x_1,x_2,...,x_N$:
+**In a more general case**, let's consider the joint distribution of $N$ variables $x_1,x_2,...,x_N$:
 $$P(x_1,x_2,...,x_N)=P(x_1)P(x_2|x_1)...P(x_N|x_{N-1}...x_1)$$
+
+Given a graphical model $G=(V,E)$ represents this joint distribution, with $V$ is the set of vertices (or nodes) of $N$ random variables $x_1, x_2, ..., x_N$ and $E$ is the set of edges (or links) between these vertices. Without loss of generality, we assume that a node can only have links from lower number nodes. 
+
+Then we can simplify each conditional probability in the right hand side by $P(x_i|x_{A_i})$, with $A_i$ is the set of direct parent of node $i$ (if exists a link *from* node $j$ *to* node $i$ then $j\in A_i$), and remove everything else in the condition.
 ### Observed and latent variables
 - Two questions:
     - Marginal inference
