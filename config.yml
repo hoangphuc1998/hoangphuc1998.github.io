@@ -86,12 +86,16 @@ params:
     homeInfoParams:
         Title: "Wanderer's Blog"
         Content: >
-            Welcome to Wanderer's Blog
+            Hi there, welcome to 
     socialIcons:
         - name: github
           url: "https://github.com/hoangphuc1998/"
         - name: facebook
           url: "https://www.facebook.com/trangtrunghoang.phuc/"
+        - name: goodreads
+          url: "https://www.goodreads.com/user/show/131888437-hoang-phuc-trang-trung"
+        - name: linkedin
+          url: https://www.linkedin.com/in/hoang-phuc-trang-trung/
 
     # label:
     #     text: "Home"

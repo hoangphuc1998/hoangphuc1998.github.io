@@ -10,7 +10,7 @@ TocOpen: true
 draft: false
 hidemeta: false
 comments: false
-description: "Desc Text."
+description: ""
 disableHLJS: true # to disable highlightjs
 disableShare: false
 disableHLJS: false
@@ -30,7 +30,7 @@ editPost:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
-
+While I was reading about generative models, I did not know a thing about 
 ## What is Bayesian inference?
 ### Bayesian networks
 (In this post, I will only talk about inference in Bayesian network, but the idea remains the same when applying to general Probabilistic Graphical Models)
@@ -62,4 +62,4 @@ Then we can simplify each conditional probability in the right hand side by $P(x
 ## Inference as Optimization problem
 
 ## Reference
-- CS228: Probabilistic Graphical Models of Stanford University ![https://ermongroup.github.io/cs228-notes](https://ermongroup.github.io/cs228-notes)
+- CS228: Probabilistic Graphical Models of Stanford University [https://ermongroup.github.io/cs228-notes](https://ermongroup.github.io/cs228-notes)
