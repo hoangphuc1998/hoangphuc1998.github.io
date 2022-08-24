@@ -36,7 +36,7 @@ While I was reading about generative models, I did not know a thing about
 (In this post, I will only talk about inference in Bayesian network, but the idea remains the same when applying to general Probabilistic Graphical Models)
 
 First of all, it is good to know what is a Bayesian network. A Bayesian network is a **directed acyclic graph** (DAG) that represents the joint probability of a set of random variables. The vertices of the graph represent random variables while the edges express the dependencies between them. To understand what this means, take a look at this easy Bayesian network with 3 random variables $a, b$ and $c$: 
-![Simple DAG of joint probability](/imgs/machine-learning/variational_inference/dag_example.png#center)
+![Simple DAG of joint probability](/imgs/machine-learning/variational_inference/dag_example.png#center "Title")
 Normally, the joint distribution of these 3 variables can be written as:
 $$P(a,b,c)=P(c|a,b)P(a,b)=P(c|a,b)P(b|a)P(a)$$
 
@@ -48,8 +48,12 @@ $$P(x_1,x_2,...,x_N)=P(x_1)P(x_2|x_1)...P(x_N|x_{N-1}...x_1)$$
 
 Given a graphical model $G=(V,E)$ represents this joint distribution, with $V$ is the set of vertices (or nodes) of $N$ random variables $x_1, x_2, ..., x_N$ and $E$ is the set of edges (or links) between these vertices. Without loss of generality, we assume that a node can only have links from lower number nodes. 
 
-Then we can simplify each conditional probability in the right hand side by $P(x_i|x_{A_i})$, with $A_i$ is the set of direct parent of node $i$ (if exists a link *from* node $j$ *to* node $i$ then $j\in A_i$), and remove everything else in the condition.
+Then we can simplify each conditional probability in the right hand side by $P(x_i|x_{Pa_i})$, with $Pa_i$ is the set of direct parents of node $i$ (if exists a link *from* node $j$ *to* node $i$ then $j\in A_i$), and remove everything else in the condition.
 ### Observed and latent variables
+A variable in graphical model can be either observed or unobserved (latent variable) while we're doing inference. Observed varibles are like the evidence that we accounted for and latent variables are query nodes that we need to infer. In graphical model language, observed variables are denoted by gray color nodes:
+
+Now, take a look at the simple spam email classification example for clarification of what we have gone through about graphical models. Suppose we have a dataset of $N$ emails ($x_i, i=1..N$) and labels ($y_i$) for each of them whether that email is spam or not. We define the model parameters $\Theta=(\theta_1, \theta_2,...,\theta_M)$ with $M$ is the number of words in the vocabulary. To simplify the problem, we restrict the $\theta$s that those can only take 3 values $-1, 0$ and $+1$. The graphical model for this problem is described in figure
+
 - Two questions:
     - Marginal inference
     - Maximum a posteriori
@@ -59,7 +63,9 @@ Then we can simplify each conditional probability in the right hand side by $P(x
 - Example
 - Sampling techniques
 - Advantages and disadvantages of sampling techniques
-## Inference as Optimization problem
+## Inference as an optimization problem
+
+## Example: Topic modeling with Linear Discriminant Analysis (LDA)
 
 ## Reference
 - CS228: Probabilistic Graphical Models of Stanford University [https://ermongroup.github.io/cs228-notes](https://ermongroup.github.io/cs228-notes)

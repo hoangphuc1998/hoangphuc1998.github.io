@@ -17,7 +17,9 @@
       <pubDate>Sun, 26 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://hoangphuc1998.github.io/posts/machine-learning/variational_inference/</guid>
-      <description>While I was reading about generative models, I did not know a thing about </description>
+      <description>While I was reading about generative models, I did not know a thing about
+What is Bayesian inference? Bayesian networks (In this post, I will only talk about inference in Bayesian network, but the idea remains the same when applying to general Probabilistic Graphical Models)
+First of all, it is good to know what is a Bayesian network. A Bayesian network is a directed acyclic graph (DAG) that represents the joint probability of a set of random variables.</description>
     </item>
     
     
