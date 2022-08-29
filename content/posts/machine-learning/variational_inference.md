@@ -36,7 +36,9 @@ While I was reading about generative models, I did not know a thing about
 (In this post, I will only talk about inference in Bayesian network, but the idea remains the same when applying to general Probabilistic Graphical Models)
 
 First of all, it is good to know what is a Bayesian network. A Bayesian network is a **directed acyclic graph** (DAG) that represents the joint probability of a set of random variables. The vertices of the graph represent random variables while the edges express the dependencies between them. To understand what this means, take a look at this easy Bayesian network with 3 random variables $a, b$ and $c$: 
-![Simple DAG of joint probability](/imgs/machine-learning/variational_inference/dag_example.png#center "Title")
+
+{{< figure src="/imgs/machine-learning/variational_inference/dag_example.png" align="center" numbered="true" >}}
+
 Normally, the joint distribution of these 3 variables can be written as:
 $$P(a,b,c)=P(c|a,b)P(a,b)=P(c|a,b)P(b|a)P(a)$$
 
@@ -52,12 +54,24 @@ Then we can simplify each conditional probability in the right hand side by $P(x
 ### Observed and latent variables
 A variable in graphical model can be either observed or unobserved (latent variable) while we're doing inference. Observed varibles are like the evidence that we accounted for and latent variables are query nodes that we need to infer. In graphical model language, observed variables are denoted by gray color nodes:
 
-Now, take a look at the simple spam email classification example for clarification of what we have gone through about graphical models. Suppose we have a dataset of $N$ emails ($x_i, i=1..N$) and labels ($y_i$) for each of them whether that email is spam or not. We define the model parameters $\Theta=(\theta_1, \theta_2,...,\theta_M)$ with $M$ is the number of words in the vocabulary. To simplify the problem, we restrict the $\theta$s that those can only take 3 values $-1, 0$ and $+1$. The graphical model for this problem is described in figure
+**Example:** Now, take a look at the simple and familiar spam email classification example for clarification of what we have gone through about graphical models:
+- Suppose we have a dataset of $N$ emails, which have labels $y_i$ ($i=1..N$), each will denote whether that email is spam or not.
+- Each email is a bag-of-word over $M$ words in the vocabulary. The words per email are represented by $x_{ij}$ ($i=1..N, j=1..M$).
+- We define the model parameters $z=(z_1, z_2,...,z_M)$. To simplify the problem, we restrict the $z$s that those can only take 3 values $-1, 0$ and $+1$.
 
-- Two questions:
-    - Marginal inference
-    - Maximum a posteriori
-- Example:
+{{< figure src="/imgs/machine-learning/variational_inference/spam_email.png" title="Graphical model for simple spam email classification example" align="center" numbered="true" >}}
+The square box is called plate notation. Every varibles in the box are replicated and all these variable are independent of each other.
+
+This graphical model will represent the joint distribution of spam email classification problem:
+$$
+\begin{aligned}
+P(x, y, z) &= \prod^N_{i=1}\prod^M_{j=1}P(y_i|x_{ij}, z_i)P(x_{ij}|z_i)P(z_i) \\\\\\
+&= \prod^N_{i=1}\prod^M_{j=1}P(y_i|x_{ij}, z_i)P(x_{ij})P(z_i)
+\end{aligned}
+$$
+In this problem, we observe the dataset $\mathcal{D}$ which include all variables $x_{ij}$ and $y_i$. The objective is to "learn" the latent variables $z$ from this dataset. In other words, we need to calculate the posterior $P(z|\mathcal{D})$. 
+
+### Inference 
 ### Why inference is hard?
 - Multidimensionality
 - Example
