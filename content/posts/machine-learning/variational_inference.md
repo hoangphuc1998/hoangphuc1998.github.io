@@ -54,12 +54,14 @@ Then we can simplify each conditional probability in the right hand side by $P(x
 ### Observed and latent variables
 A variable in graphical model can be either observed or unobserved (latent variable) while we're doing inference. Observed varibles are like the evidence that we accounted for and latent variables are query nodes that we need to infer. In graphical model language, observed variables are denoted by gray color nodes:
 
-**Example:** Now, take a look at the simple and familiar spam email classification example for clarification of what we have gone through about graphical models:
+{{< figure src="/imgs/machine-learning/variational_inference/observed_variable.png" caption="Annotations for observed variable $x$ and latent variable $z$" align="center">}}
+### Example
+Now, take a look at the simple and familiar spam email classification example for clarification of what we have gone through about graphical models:
 - Suppose we have a dataset of $N$ emails, which have labels $y_i$ ($i=1..N$), each will denote whether that email is spam or not.
 - Each email is a bag-of-word over $M$ words in the vocabulary. The words per email are represented by $x_{ij}$ ($i=1..N, j=1..M$).
 - We define the model parameters $z=(z_1, z_2,...,z_M)$. To simplify the problem, we restrict the $z$s that those can only take 3 values $-1, 0$ and $+1$.
 
-{{< figure src="/imgs/machine-learning/variational_inference/spam_email.png" title="Graphical model for simple spam email classification example" align="center" numbered="true" >}}
+{{< figure src="/imgs/machine-learning/variational_inference/spam_email.png" caption="Graphical model for simple spam email classification example" align="center" numbered="true" >}}
 The square box is called plate notation. Every varibles in the box are replicated and all these variable are independent of each other.
 
 This graphical model will represent the joint distribution of spam email classification problem:
@@ -69,9 +71,12 @@ P(x, y, z) &= \prod^N_{i=1}\prod^M_{j=1}P(y_i|x_{ij}, z_i)P(x_{ij}|z_i)P(z_i) \\
 &= \prod^N_{i=1}\prod^M_{j=1}P(y_i|x_{ij}, z_i)P(x_{ij})P(z_i)
 \end{aligned}
 $$
-In this problem, we observe the dataset $\mathcal{D}$ which include all variables $x_{ij}$ and $y_i$. The objective is to "learn" the latent variables $z$ from this dataset. In other words, we need to calculate the posterior $P(z|\mathcal{D})$. 
+In this problem, we observe the dataset $\mathcal{D}$ which include all variables $x_{ij}$ and $y_i$. The objective is to "learn" the latent variables $z$ from this dataset. In other words, we need to calculate the posterior $P(z|\mathcal{D})$. This leads to the need to do inference in graphical models.
 
-### Inference 
+### Inference in Graphical Models
+Given a graphical model, **inference is the task to find the posterior distribution $P(z|x)$**, with $z$ is a set of latent variables and $x$ is a set of observed variables. Based on Bayes' theorem, this posterior distribution can be expressed as:
+$$P(z|x)=\frac{P(x|z)P(z)}{P(x)}$$
+
 ### Why inference is hard?
 - Multidimensionality
 - Example
@@ -79,6 +84,7 @@ In this problem, we observe the dataset $\mathcal{D}$ which include all variable
 - Advantages and disadvantages of sampling techniques
 ## Inference as an optimization problem
 
+## Optimizing Evidence Lower Bound objective
 ## Example: Topic modeling with Linear Discriminant Analysis (LDA)
 
 ## Reference
